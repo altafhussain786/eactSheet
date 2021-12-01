@@ -6,9 +6,9 @@ import RestaurantDetail from './src/screens/RestaurantDetail';
 const App = () => {
   return (
     <View style={styles.container}>
-      {/* <Home /> */}
+      <Home />
 
-      <RestaurantDetail />
+      {/* <RestaurantDetail /> */}
     </View>
   );
 };

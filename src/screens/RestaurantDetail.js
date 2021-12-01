@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import About from '../component/RestaurantDetail/About';
 import MenuItem from '../component/RestaurantDetail/MenuItem';
+import ViewCart from '../component/RestaurantDetail/ViewCart';
 
 const RestaurantDetail = () => {
   return (
@@ -16,9 +17,10 @@ const RestaurantDetail = () => {
       <StatusBar backgroundColor={'black'} />
       <SafeAreaView style={{flex: 1, backgroundColor: '#eeee'}}>
         <About />
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <MenuItem />
         </ScrollView>
+        <ViewCart />
       </SafeAreaView>
     </>
   );

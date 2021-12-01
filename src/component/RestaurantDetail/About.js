@@ -2,21 +2,6 @@ import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/FontAwesome';
 
-const RestaurnetDetail = [
-  {
-    image_url:
-      'https://i0.wp.com/www.restaurantmenu.pk/wp-content/uploads/2020/02/food-centre.jpg?resize=800%2C613',
-    name: 'Farmhouse Kitchen Thai',
-    categories: 'Thai',
-    FoodType: 'comfort Food',
-    price: '$$',
-    cardImg: '',
-    rating: 4.5,
-    startIcon: '',
-    range: '(2912+)',
-  },
-];
-
 const About = props => {
   return (
     <View style={styles.container}>
