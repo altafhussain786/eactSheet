@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Checkbox} from 'react-native-paper';
-
+import {Divider} from 'react-native-elements';
 const RestaurnetDetail = [
   {
     image_url: require('../../assets/images/splash.png'),

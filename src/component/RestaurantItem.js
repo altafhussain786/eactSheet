@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+// import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 export const localRestaurant = [
   {
@@ -56,7 +57,7 @@ const RestaurnantImage = props => {
       <TouchableOpacity
         onPress={() => setcolor('red')}
         style={styles.heartStyle}>
-        <MaterialCommunityIcons name="heart-outline" size={35} color={color} />
+        <Entypo name="heart" size={35} color={color} />
       </TouchableOpacity>
     </>
   );

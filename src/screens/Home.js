@@ -4,8 +4,9 @@ import HeaderTabs from '../component/HeaderTabs';
 import SearchBar from '../component/SearchBar';
 import Categories from '../component/Categories';
 // import RestaurantItem, {localRestaurant} from '../component/RestaurantItem';
+import BottomTabs from '../navigation/BottomTabs';
 import RestaurantItem, {localRestaurant} from '../component/RestaurantItem';
-
+// import {Divider} from 'react-native-elements';
 const YELP_API_KEY =
   'fpZrM2DtfGs93jREZ15RoZj2G77g4aovL0pAhUxV355NzEyEkklfk2WNDG677hv-GYsSP3A09JwV9ulhCStbvo2AEXjKF-pPCw_IhqF5n2Y_vduB3PaGGTji-COmYXYx';
 const Home = () => {
@@ -54,6 +55,8 @@ const Home = () => {
         <Categories />
         <RestaurantItem restData={restaurantData} name="Altaf" />
       </ScrollView>
+      {/* <Divider width={1} /> */}
+      <BottomTabs />
     </SafeAreaView>
   );
 };
