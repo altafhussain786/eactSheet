@@ -8,7 +8,7 @@ const SearchBar = () => {
   return (
     <View style={styles.container}>
       <GooglePlacesAutocomplete
-        query={{key: 'AIzaSyAJMmBVJLcJ7u6ieWKXUMsnsrHYrGM19ZU'}}
+        
         styles={{
           textInput: {
             borderRadius: 10,
