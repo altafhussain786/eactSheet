@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 // import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -38,14 +45,16 @@ export const localRestaurant = [
 
 const RestaurantItem = props => {
   return (
-    <TouchableOpacity activeOpacity={1} style={{marginBottom: 30}}>
+    <>
+      {/* <TouchableOpacity activeOpacity={1}  style={{marginBottom: 30}}> */}
       {props.restData.map((item, index) => (
         <View key={index} style={styles.container}>
           <RestaurnantImage image={item.image_url} />
           <RestaurnantInfo name={item.name} rating={item.rating} />
         </View>
       ))}
-    </TouchableOpacity>
+      {/* </TouchableOpacity> */}
+    </>
   );
 };
 
@@ -66,17 +75,19 @@ const RestaurnantImage = props => {
 const RestaurnantInfo = props => {
   return (
     <>
-      <View style={styles.infoStyle}>
-        <View>
-          <Text style={styles.tittle}>{props.name}</Text>
-          <Text style={styles.timetxt}>35-45 .min</Text>
-        </View>
-        <View>
-          <View style={styles.rattingContainer}>
-            <Text style={styles.rattingtxt}>{props.rating}</Text>
+      <TouchableOpacity>
+        <View style={styles.infoStyle}>
+          <View>
+            <Text style={styles.tittle}>{props.name}</Text>
+            <Text style={styles.timetxt}>35-45 .min</Text>
+          </View>
+          <View>
+            <View style={styles.rattingContainer}>
+              <Text style={styles.rattingtxt}>{props.rating}</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     </>
   );
 };

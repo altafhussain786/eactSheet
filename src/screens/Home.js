@@ -6,10 +6,11 @@ import Categories from '../component/Categories';
 // import RestaurantItem, {localRestaurant} from '../component/RestaurantItem';
 import BottomTabs from '../navigation/BottomTabs';
 import RestaurantItem, {localRestaurant} from '../component/RestaurantItem';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 // import {Divider} from 'react-native-elements';
 const YELP_API_KEY =
   'fpZrM2DtfGs93jREZ15RoZj2G77g4aovL0pAhUxV355NzEyEkklfk2WNDG677hv-GYsSP3A09JwV9ulhCStbvo2AEXjKF-pPCw_IhqF5n2Y_vduB3PaGGTji-COmYXYx';
-const Home = () => {
+const Home = ({navigation}) => {
   const [restaurantData, setrestaurantData] = useState(localRestaurant);
   // const [dummy, setDummy] = useState(null);
 
@@ -36,9 +37,6 @@ const Home = () => {
       .then(json => setrestaurantData(json.businesses));
   };
 
-  const Data = getRestaurantFromYelp();
-  // console.log('=======>FROM APi', Data);
-
   useEffect(() => {
     getRestaurantFromYelp();
   }, []);
@@ -53,7 +51,10 @@ const Home = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Categories />
-        <RestaurantItem restData={restaurantData} name="Altaf" />
+        <TouchableOpacity
+          onPress={() => navigation.navigate('RestaurantDetail')}>
+          <RestaurantItem restData={restaurantData} name="Altaf" />
+        </TouchableOpacity>
       </ScrollView>
       {/* <Divider width={1} /> */}
       <BottomTabs />
